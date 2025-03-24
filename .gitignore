@@ -1,0 +1,13 @@
+# Ignore vendor and node_modules directories
+/vendor
+/node_modules
+
+# Ignore .env file
+.env
+
+# Ignore public storage directory
+/public/storage
+
+# Ignore IDE specific files
+.idea
+.vscode
