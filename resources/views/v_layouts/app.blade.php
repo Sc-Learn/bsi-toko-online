@@ -58,7 +58,7 @@
                     <!-- Logo -->
                     <div class="header-logo">
                         <a class="logo" href="#">
-                            <img src="{{ asset('image/logo.png') }}" alt="">
+                            <img src="{{ asset('image/icon_univ_bsi.png') }}" alt="">
                         </a>
                     </div>
                     <!-- /Logo -->
@@ -508,31 +508,31 @@
                 <div id="home-slick">
                     <!-- banner -->
                     <div class="banner banner-1">
-                        <img src="{{ asset('frontend/img/banner01.jpg') }}" alt="">
+                        <img src="{{ asset('frontend/banner/banner/img_slide01.jpg') }}" alt="">
                         <div class="banner-caption text-center">
-                            <h1>Bags sale</h1>
-                            <h3 class="white-color font-weak">Up to 50% Discount</h3>
-                            <button class="primary-btn">Shop Now</button>
+                            <h1>Jajanan Tradisional</h1>
+                            <h3 class="font-weak" style="color: 30323a;">Khas Makanan
+                                Indonesia</h3>
+                            <button class="primary-btn">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- /banner -->
-
                     <!-- banner -->
                     <div class="banner banner-1">
-                        <img src="{{ asset('frontend/img/banner02.jpg') }}" alt="">
+                        <img src="{{ asset('frontend/banner/banner/img_slide02.jpg') }}" alt="">
                         <div class="banner-caption">
-                            <h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>
-                            <button class="primary-btn">Shop Now</button>
+                            <h1 class="primary-color">Khas Makanan Indonesia<br><span
+                                    class="white-color font-weak">Jajanan Tradisional</span></h1>
+                            <button class="primary-btn">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- /banner -->
-
                     <!-- banner -->
                     <div class="banner banner-1">
-                        <img src="{{ asset('frontend/img/banner03.jpg') }}" alt="">
+                        <img src="{{ asset('frontend/banner/banner/img_slide03.jpg') }}" alt="">
                         <div class="banner-caption">
-                            <h1 class="white-color">New Product <span>Collection</span></h1>
-                            <button class="primary-btn">Shop Now</button>
+                            <h1 style="color: f8694a;">Khas Makanan <span>Indonesia</span></h1>
+                            <button class="primary-btn">Pesan Sekarang</button>
                         </div>
                     </div>
                     <!-- /banner -->
@@ -615,43 +615,7 @@
                     <!-- /store top filter -->
 
                     <!-- STORE -->
-                    <div id="store">
-                        <!-- row -->
-                        <div class="row">
-                            <!-- Product Single -->
-                            <div class="col-md-4 col-sm-6 col-xs-6">
-                                <div class="product product-single">
-                                    <div class="product-thumb">
-                                        <div class="product-label">
-                                            <span>New</span>
-                                            <span class="sale">-20%</span>
-                                        </div>
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-                                        <img src="{{ asset('frontend/img/product01.jpg') }}" alt="">
-                                    </div>
-                                    <div class="product-body">
-                                        <h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-                                        <div class="product-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o empty"></i>
-                                        </div>
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-                                        <div class="product-btns">
-                                            <button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-                                            <button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Product Single -->
-                            <div class="clearfix visible-md visible-lg visible-sm visible-xs"></div>
-                        </div>
-                        <!-- /row -->
-                    </div>
+                    <!-- @yield('content') -->
                     <!-- /STORE -->
 
                     <!-- store bottom filter -->
