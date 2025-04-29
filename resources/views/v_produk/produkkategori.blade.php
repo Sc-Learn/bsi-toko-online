@@ -47,11 +47,6 @@ plus"></i></button>
         @endforeach
         <div class="clearfix visible-md visible-lg visible-sm visible-xs"></div>
     </div>
-    <div class="store-filter clearfix">
-        <div class="pagination">
-            {{ $produk->links('vendor.pagination.custom') }}
-        </div>
-    </div>
     <!-- /row -->
 </div>
 <!-- /STORE -->
