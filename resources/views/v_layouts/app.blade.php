@@ -79,8 +79,33 @@
                             </a>
                         </li>
                         <!-- /Cart -->
-
+                        @if (Auth::check())
                         <!-- Account -->
+                        <li class="header-account dropdown default-dropdown">
+                            <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+                                <div class="header-btns-icon">
+                                    <i class="fa fa-user-o"></i>
+                                </div>
+                                <strong class="text-uppercase">{{ Auth::user()->nama }}<i
+                                        class="fa fa-caret-down"></i></strong>
+                            </div>
+                            <ul class="custom-menu">
+                                <li><a href="#"><i class="fa fa-user-o"></i> Akun Saya</a></li>
+                                <li><a href="#"><i class="fa fa-check"></i> History</a></li>
+                                <li>
+                                    <a href="#"
+                                        onclick="event.preventDefault(); document.getElementById('keluar-app').submit();"><i class="fa fa-power-off"></i> Keluar
+                                    </a>
+                                    <!-- form keluar app -->
+                                    <form id="keluar-app" action="{{ route('logout') }}" method="POST"
+                                        class="d-none">
+                                        @csrf
+                                    </form>
+                                    <!-- form keluar app end -->
+                                </li>
+                            </ul>
+                        </li>
+                        @else
                         <li class="header-account dropdown default-dropdown">
                             <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
                                 <div class="header-btns-icon">
@@ -89,16 +114,9 @@
                                 <strong class="text-uppercase">Akun Saya<i class="fa fa-caret-down"></i></strong>
                             </div>
                             <a href="{{ route('auth.redirect') }}" class="text-uppercase">Login</a>
-                            <ul class="custom-menu">
-                                <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li>
-                                <li><a href="#"><i class="fa fa-exchange"></i> Compare</a></li>
-                                <li><a href="#"><i class="fa fa-check"></i> Checkout</a></li>
-                                <li><a href="{{ route('auth.redirect') }}"><i class="fa fa-unlock-alt"></i> Login</a></li>
-                                <li><a href="#"><i class="fa fa-user-plus"></i> Create An Account</a></li>
-                            </ul>
                         </li>
                         <!-- /Account -->
+                        @endif
 
                         <!-- Mobile nav toggle-->
                         <li class="nav-toggle">

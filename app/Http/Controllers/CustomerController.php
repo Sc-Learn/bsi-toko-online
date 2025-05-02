@@ -56,6 +56,7 @@ class CustomerController extends Controller
             // Redirect ke halaman utama
             return redirect()->intended('beranda');
         } catch (\Exception $e) {
+            Log::error('Error during Google login', ['error' => $e->getMessage()]);
             // Redirect ke halaman utama jika terjadi kesalahan
             return redirect('/')->with('error', 'Terjadi kesalahan saat login dengan
     Google.');
@@ -67,5 +68,15 @@ class CustomerController extends Controller
         $request->session()->invalidate(); // Hapus session
         $request->session()->regenerateToken(); // Regenerate token CSRF
         return redirect('/')->with('success', 'Anda telah berhasil logout.');
+    }
+
+    public function index()
+    {
+        $customer = Customer::orderBy('id', 'desc')->get();
+        return view('backend.v_customer.index', [
+            'judul' => 'Customer',
+            'sub' => 'Halaman Customer',
+            'index' => $customer
+        ]);
     }
 }
