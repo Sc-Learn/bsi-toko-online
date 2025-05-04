@@ -90,7 +90,8 @@
                                         class="fa fa-caret-down"></i></strong>
                             </div>
                             <ul class="custom-menu">
-                                <li><a href="#"><i class="fa fa-user-o"></i> Akun Saya</a></li>
+                                <li><a href="{{ route('customer.akun', ['id' => Auth::user()->id]) }}"><i class="fa fa-user-o"></i> Akun Saya</a>
+                                </li>
                                 <li><a href="#"><i class="fa fa-check"></i> History</a></li>
                                 <li>
                                     <a href="#"
@@ -422,7 +423,19 @@
     <script src="{{ asset('frontend/js/nouislider.min.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery.zoom.min.js') }}"></script>
     <script src="{{ asset('frontend/js/main.js') }}"></script>
-
+    <script>
+         function previewFoto() {
+            const foto = document.querySelector('input[name="foto"]');
+            const fotoPreview = document.querySelector('.foto-preview');
+            fotoPreview.style.display = 'block';
+            const fotoReader = new FileReader();
+            fotoReader.readAsDataURL(foto.files[0]);
+            fotoReader.onload = function(fotoEvent) {
+                fotoPreview.src = fotoEvent.target.result;
+                fotoPreview.style.width = '100%';
+            }
+        }
+    </script>
 </body>
 
 </html>
