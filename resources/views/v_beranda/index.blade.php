@@ -30,10 +30,9 @@ plus"></i> Detail Produk</button>
                     <div class="product-btns">
                         <a href="{{ route('produk.detail', $row->id) }}" title="Detail
 Produk">
-                            <button class="main-btn icon-btn"><i class="fa fa-search-
-plus"></i></button>
+                            <button class="main-btn icon-btn"><i class="fa fa-search-plus"></i></button>
                         </a>
-                        <form action="3" method="post"
+                        <form action="{{ route('order.addToCart', $row->id) }}" method="post"
                             style="display: inline-block;" title="Pesan Ke Aplikasi">
                             @csrf
                             <button type="submit" class="primary-btn add-to-cart"><i
